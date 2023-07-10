@@ -298,7 +298,31 @@
     background: linear-gradient(to right, #3a7bd5, #0d3192);
 }
 
+   .iframe-container {
+      position: relative;
+      width: 100%; 
+      overflow: hidden; 
+    }
 
+    .iframe-container::before {
+      content: "";
+      display: block;
+      padding-top: 60%; /* Mengatur aspek rasio */
+    }
+
+    .iframe-container amp-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 768px) {  /* Ubah 768px dengan batas lebar layar mobile yang Anda inginkan */
+      .iframe-container::before {
+        padding-top: 150%;  /* Mengatur aspek rasio pada mobile, ubah nilai ini */
+      }
+    }
 
         .thumbs {
             position: relative;
@@ -627,12 +651,10 @@
         </div>
     </section>
 <section class="container">
-        <div itemscope itemtype="https://schema.org/WebPage">
-    <meta itemprop="name" content="Togel Hari Ini">
-    <meta itemprop="url" content="https://tabel898.com/hksgpsdy">
-    <meta itemprop="description" content="Keluaran Togel Hari Ini">
-    <amp-iframe width="250" height="300" title="Togel Hari Ini" sandbox="allow-scripts allow-same-origin" layout="responsive" src="https://rankcrack.com/live-draw-sdy.php"></amp-iframe>
-</div>
+<div class="iframe-container">
+<amp-iframe width="250" height="350" title="Togel Hari Ini" sandbox="allow-scripts allow-same-origin" layout="responsive" src="https://rankcrack.com/live-draw-sdy.php"></amp-iframe>
+    </div>
+</section>
 
 </section>
     <article>
